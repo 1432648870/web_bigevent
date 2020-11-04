@@ -1,4 +1,8 @@
 $(function() {
+    if (!localStorage.getItem("token")) {
+        location.href = "login.html"
+        return;
+    }
     getUserInfo()
     var layer = layui.layer
     $('#outLogin').on('click', function() {
