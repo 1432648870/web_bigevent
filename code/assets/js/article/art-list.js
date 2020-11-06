@@ -3,8 +3,8 @@ $(function() {
     var form = layui.form
     var laypage = layui.laypage
         // 定义美化时间过滤器
-    template.defaults.imports.dataFormat = function(data) {
-        const dt = new Data(data)
+    template.defaults.imports.dataFormat = function(val) {
+        const dt = new Data(val)
         var year = padZero(dt.getFullYear());
         var m = padZero(dt.getMonth() + 1);
         var d = padZero(dt.getDate());
